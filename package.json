@@ -1,0 +1,34 @@
+{
+  "name": "com.deucarian.media.api-integration",
+  "version": "0.1.0",
+  "displayName": "Deucarian Media API Integration",
+  "description": "Deucarian API adapters for typed Media texture, text, and byte loading.",
+  "unity": "2021.3",
+  "author": {
+    "name": "Deucarian"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deucarian/Media-API-Integration.git"
+  },
+  "dependencies": {
+    "com.deucarian.api": "1.1.3",
+    "com.deucarian.media": "0.1.0"
+  },
+  "keywords": [
+    "media",
+    "api",
+    "image",
+    "text",
+    "bytes",
+    "integration"
+  ],
+  "samples": [
+    {
+      "displayName": "API Media Loaders",
+      "description": "Compiled example composing typed API media loaders from an IApiClient.",
+      "path": "Samples~/ApiMediaLoaders"
+    }
+  ]
+}
+

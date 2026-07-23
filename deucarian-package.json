@@ -1,0 +1,25 @@
+{
+  "packageId": "com.deucarian.media.api-integration",
+  "displayName": "Deucarian Media API Integration",
+  "samplePolicy": "compiled-example",
+  "ownedCapabilities": [],
+  "runtimeAssemblies": [
+    "Deucarian.Media.APIIntegration"
+  ],
+  "editorAssemblies": [],
+  "sampleAssemblies": [
+    "Deucarian.Media.APIIntegration.Samples"
+  ],
+  "testAssemblies": [
+    "Deucarian.Media.APIIntegration.Tests"
+  ],
+  "requiredDependencies": [
+    "com.deucarian.api",
+    "com.deucarian.media"
+  ],
+  "optionalVersionDefinedDependencies": [],
+  "allowedDirectDebugCalls": [],
+  "allowedDirectUnityObjectLifetimeCalls": [],
+  "expectedSamplesRoot": "Samples~"
+}
+

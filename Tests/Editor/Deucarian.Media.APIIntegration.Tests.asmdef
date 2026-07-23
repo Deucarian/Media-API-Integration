@@ -1,0 +1,24 @@
+{
+  "name": "Deucarian.Media.APIIntegration.Tests",
+  "rootNamespace": "Deucarian.Media.APIIntegration.Tests",
+  "references": [
+    "Deucarian.API",
+    "Deucarian.Media",
+    "Deucarian.Media.Unity",
+    "Deucarian.Media.APIIntegration"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Deucarian.Media.APIIntegration.Samples",
+  "rootNamespace": "Deucarian.Media.APIIntegration.Samples",
+  "references": [
+    "Deucarian.API",
+    "Deucarian.Media",
+    "Deucarian.Media.Unity",
+    "Deucarian.Media.APIIntegration"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

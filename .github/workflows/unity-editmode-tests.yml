@@ -1,0 +1,39 @@
+name: Unity EditMode Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  editmode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create Unity test project
+        shell: bash
+        run: |
+          mkdir -p TestProject/Assets TestProject/Packages TestProject/ProjectSettings
+          printf '%s\n' '{"m_EditorVersion":"2022.3.62f3"}' > TestProject/ProjectSettings/ProjectVersion.txt
+          cat > TestProject/Packages/manifest.json <<EOF
+          {
+            "dependencies": {
+              "com.deucarian.api": "https://github.com/Deucarian/API.git#main",
+              "com.deucarian.common": "https://github.com/Deucarian/Common.git#main",
+              "com.deucarian.media": "https://github.com/Deucarian/Media.git#main",
+              "com.deucarian.media.api-integration": "file:${GITHUB_WORKSPACE}",
+              "com.unity.test-framework": "1.1.33"
+            },
+            "testables": [
+              "com.deucarian.media.api-integration"
+            ]
+          }
+          EOF
+      - name: Run EditMode tests
+        uses: game-ci/unity-test-runner@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: TestProject
+          testMode: EditMode
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
