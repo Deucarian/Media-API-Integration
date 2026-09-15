@@ -23,7 +23,11 @@ namespace Deucarian.Media.APIIntegration.Tests
                     "media/image",
                     null)
             };
-            ApiRequest request = new ApiRequest("media/image");
+            ApiRequest request = new ApiRequest("media/image")
+            {
+                UseIncrementalTextureUpload = true,
+                SuppressLogging = true
+            };
             request.Headers["X-Tenant"] = "simultria";
 
             MediaLoadResult<Texture2D> result =
@@ -39,6 +43,8 @@ namespace Deucarian.Media.APIIntegration.Tests
                 client.LastRequest.ResponseFormat,
                 Is.EqualTo(ApiResponseFormat.Texture));
             Assert.That(request.ResponseFormat, Is.EqualTo(ApiResponseFormat.Auto));
+            Assert.That(client.LastRequest.UseIncrementalTextureUpload, Is.True);
+            Assert.That(client.LastRequest.SuppressLogging, Is.True);
             Assert.That(
                 client.LastRequest.Headers["X-Tenant"],
                 Is.EqualTo("simultria"));

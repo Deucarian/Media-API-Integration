@@ -18,6 +18,10 @@ namespace Deucarian.Media.APIIntegration
                 BodyFormat = source.BodyFormat,
                 TimeoutSeconds = source.TimeoutSeconds,
                 ResponseFormat = responseFormat,
+                UseIncrementalTextureUpload = source.UseIncrementalTextureUpload,
+                SuppressLogging = source.SuppressLogging,
+                JsonPropertyNamingOverride = source.JsonPropertyNamingOverride,
+                RequestPolicy = source.RequestPolicy,
                 AssetBundleOptions = source.AssetBundleOptions,
                 TransferProgress = source.TransferProgress,
                 BearerTokenOverride = source.BearerTokenOverride
